@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Belanosima%3Awght%40400%3B600%3B700&family=Roboto%3Awght%40100%3B300%3B400%3B500%3B700%3B900&family=VT323&display=swap%27%29%3B);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", arial, sans-serif;
+
+}
+
+:root{
+    --cor-bg: #a87b05;
+    --cor-um: #664300;
+    --cor-dois:#f9db5c;
+    --cor-branco: #ccc;
+    --cor-preto: #111;
+}
+
+::selection{
+    background-color: var(--cor-dois);
+}
+
+.info h1::selection, .info img::selection{
+    background: var(--color-um);
+}
+
+.bio{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0;
+    background-color: var(--cor-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+}
+
+.info, .links{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info img{
+    width: 30%;
+    min-width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-dois);
+}
+
+.info h1{
+    color: var(--cor-dois);
+    font-size: 2.2em;
+    font-family: "belanosima", arial, sans-serif;
+}
+
+.info h2{
+    color: var(--cor-um);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: "VT323", arial, sans-serif;
+}
+
+.info p{
+    color: var(--cor-branco);
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 0.8em; 
+    text-align: center;
+    width: 60%;   
+}
+
+.links{
+    gap: 20px;    
+}
+
+.links a{
+    padding: 20px 30px;
+    width: 80%;
+    background: var(--cor-dois);
+    color: var(--cor-um);
+    font-family: "belanosima";
+    text-decoration: none;
+    border-radius: 20px;
+    border-bottom: 4px solid var(--cor-um);
+    border-right: 4px solid var(--cor-um);
+
+    transition: all 0.3s;
+}
+
+.links a::selection{
+    background: rgba(0,0,0, 0);
+}
+
+.links a:hover{
+    background: var(--cor-um);
+    color: var(--cor-dois);
+    border-bottom: 4px solid var(--cor-dois);
+    border-right: 4px solid var(--cor-dois);
+}
+
+@media screen and (max-widht:768px){
+    .info, .links{
+        width: 90%;
+    }
+}
